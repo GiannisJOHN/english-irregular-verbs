@@ -29,7 +29,7 @@ Word.prototype.categorize = function() {
     }
 }
 
-const wordsDictionary = words.reduce((accumulator, currentValue) => {
+export const wordsDictionary = words.reduce((accumulator, currentValue) => {
 
     let word = new Word(currentValue.Infinitive, currentValue.SimplePast, currentValue.PastParticiple, currentValue.Μετάφραση)
     word.categorize()
@@ -40,4 +40,4 @@ const wordsDictionary = words.reduce((accumulator, currentValue) => {
 }, {})
 
 
-export default wordsDictionary
+

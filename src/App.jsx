@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import Navbar from './components/navbar/navbar'
 import WordsTable from './components/words-table/words-table'
 import { words } from './words/words.js'
-import wordsDictionary from './words/wordsDictionary'
+import { wordsDictionary } from './words/wordsDictionary'
 import { Categorize } from './javascript/words-process.js'
+import separateIntoArray from './javascript/separateIntoArray'
 import paginate from './javascript/pagination.js'
 import SelectCategory from './components/categories/categories.jsx'
 import SearchInput from './components/seacrh/search-input.jsx'
@@ -14,12 +15,14 @@ import linkedin from './images/linkedin.svg'
 export const MyContext = React.createContext()
 
 function App () {
-  console.log(wordsDictionary);
+
   const [pageNumber, setPageNumber] = useState(0)
   const [categoryName, setCategoryName] = useState('allDifferent')
   const [searchResult, setSearchResult] = useState('')
-  let category = new Categorize(words)
-  let page = paginate(category[categoryName])
+
+  //let category = new Categorize(words)
+  let list = separateIntoArray(categoryName, wordsDictionary)
+  let page = paginate(list)
   
   return (
       <>

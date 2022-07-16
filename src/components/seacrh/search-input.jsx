@@ -2,6 +2,7 @@ import searchImg from '../../images/search.svg'
 import { words } from '../../words/words.js'
 import { useState, useContext } from 'react'
 import { MyContext } from '../../App'
+import { wordsDictionary } from './words/wordsDictionary'
 
 function SearchInput () {
     const [userInput, setUserInput] = useState('')
