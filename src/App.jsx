@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import Navbar from './components/navbar/navbar'
-import WordsTable from './components/words-table/words-table'
+import Navbar from './components/Navbar'
+import WordsTable from './components/WordsTable'
 import { words } from './words/words.js'
 import { wordsDictionary } from './words/wordsDictionary'
-import { Categorize } from './javascript/words-process.js'
+import { Categorize } from './javascript/wordsProcess.js'
 import separateIntoArray from './javascript/separateIntoArray'
 import paginate from './javascript/pagination.js'
-import SelectCategory from './components/categories/categories.jsx'
-import SearchInput from './components/seacrh/search-input.jsx'
+import SelectCategory from './components/Categories/index.jsx'
+import SearchInput from './components/Search/index.jsx'
 
 import github from './images/github.svg'
 import linkedin from './images/linkedin.svg'
@@ -40,7 +40,7 @@ function App () {
       </MyContext.Provider>
       <div className="pagination">
         {
-          page.map((each, index) => {
+          page.map((element, index) => {
             return <button className={pageNumber === index ? 'activePaginationButton' : null} onClick={() => {
               setPageNumber(index)
             }}>{index + 1}</button>

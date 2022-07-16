@@ -1,0 +1,25 @@
+.wordsTable {
+    border: 1px solid #cbcbcb;
+    border-radius: 100px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.wordsTable td,
+.wordsTable th {
+    padding: 10px 25px;
+}
+
+thead {
+    padding: 10px;
+    border-bottom: 2px solid #000;
+}
+
+.wordsTable th {
+    background-color: #fff;
+    text-align: left;
+}
+
+.wordsTable td {
+    border-bottom: 1px solid #cbcbcb;
+}

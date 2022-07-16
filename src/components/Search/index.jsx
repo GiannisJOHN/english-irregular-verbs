@@ -3,6 +3,8 @@ import { words } from '../../words/words.js'
 import { useState, useContext } from 'react'
 import { MyContext } from '../../App'
 import { wordsDictionary } from '../../words/wordsDictionary.js'
+import './index.css'
+
 
 function SearchInput () {
     const [userInput, setUserInput] = useState('')

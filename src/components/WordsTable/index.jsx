@@ -1,4 +1,4 @@
-
+import './index.css'
 
 function WordsTable (props) {
 
@@ -15,13 +15,13 @@ function WordsTable (props) {
             </thead>
             <tbody>
                 { 
-                 props.words.map((each) => {
+                 props.words.map((word) => {
 
                     return (
                         <tr>
-                            <td>{each.Infinitive}</td>
-                            <td>{each.SimplePast}</td>
-                            <td>{each.PastParticiple}</td>
+                            <td>{word.Infinitive}</td>
+                            <td>{word.SimplePast}</td>
+                            <td>{word.PastParticiple}</td>
                         </tr>
                     )
                 })

@@ -1,18 +1,20 @@
 import { useContext, useState } from 'react'
 import { MyContext } from '../../App'
 
+import './index.css'
+
 function SelectCategory () {
     const updateFunction = useContext(MyContext)
     const [activeButtons, setActiveButtons] = useState([false, true, false, false, false])
     
     function activateButton (numberOfButton) {
-        setActiveButtons(activeButtons.map((each, index) => {                       
+        setActiveButtons(activeButtons.map((buttonState, index) => {                       
             if (index === numberOfButton) {
-                each = true
+                buttonState = true
             } else {
-                each = false
+                buttonState = false
             }
-            return each
+            return buttonState
         }))
     }
 
