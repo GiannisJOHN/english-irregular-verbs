@@ -2,21 +2,31 @@ import searchImg from '../../images/search.svg'
 import { words } from '../../words/words.js'
 import { useState, useContext } from 'react'
 import { MyContext } from '../../App'
-import { wordsDictionary } from './words/wordsDictionary'
+import { wordsDictionary } from '../../words/wordsDictionary.js'
 
 function SearchInput () {
     const [userInput, setUserInput] = useState('')
     const [cleanInput, setCleanInput] = useState(false)
-    let setSearchResult = useContext(MyContext)
+    let setSearchResult = useContext(MyContext)[2]
 
     function handleResult() {
+        /*
         let searchResult = words.filter((each) => {
             setCleanInput(true)
             if (userInput === each.Infinitive) {
                 return each
             }
         })
-        setSearchResult[2](searchResult)
+        */
+        let searchResult = []
+        setCleanInput(true)
+        for (const [key, value] of Object.entries(wordsDictionary)) {
+            if (userInput === key) {
+                searchResult = [value]
+            }
+        }
+
+        setSearchResult(searchResult)
     }
     
     return (

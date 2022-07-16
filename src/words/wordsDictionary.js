@@ -40,4 +40,3 @@ export const wordsDictionary = words.reduce((accumulator, currentValue) => {
 }, {})
 
 
-

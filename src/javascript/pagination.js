@@ -9,4 +9,6 @@ function paginate (arrayOfWords) {
     return chunked
 }
 
+
+
 export default paginate
